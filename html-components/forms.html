@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Forms</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        textarea {
+            border: thick solid;
+            padding: 10px;
+            font-size: 20px;
+            margin:0 auto;
+        }
+
+        input[type="submit"] {
+            background: rgb(76, 255, 0);
+            color: black;
+            padding: 5px;
+        }
+
+        input[type="text"] {
+            text-align: center;
+            border: solid;
+            padding:10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        In this form, the user will have to input their poastal code and the city in which they live in into the input textboxes. The select tag
+        displays a drop-down menu listing the various methods of shipping(includeing Standard, One-day, and Two-day shipping) The radio input items
+        display various methods of payment where the PayPal option is pre-checked. In the textarea the user can add any comments they might have. 
+        The input chekboxes give an option for the user to sign themselves up for email updates as well as save their payment information. Finally
+        the submit button submits the form to the server.
+    -->
+    <form method="get">
+
+      <label><input type="text" name="postal code" placeholder="Please enter your Postal Code" size="26" maxlength="26" id="postal code" /></label>
+        <label><input type="text" name="city" placeholder= "Please enter the name of your City" size="30" maxlength="30" id="city" /></label>
+
+        <p>Please select a shipping method</p>
+
+        <select name="shipping" id="shipping">
+            <option value="Standard Shipping">Standard Shipping</option>
+            <option value="One-Day Shipping">One-Day Shipping</option>
+            <option value="Two-Day Shipping ">Two-Day Shipping</option>
+        </select>
+
+        <p>Please select a payment method</p>
+
+        <label><input type="radio" name="PayaPal" value="Payment" checked /><b><u><i>PayPal</i></u></b></label>
+        <br/><label><input type="radio" name="Debit Card" value="Payment" /><b><u><i>Debit Card</i></u></b></label>
+        <br/><label><input type="radio" name="Credit Card" value="Payment" /><b><u><i>Credit Card</i></u></b></label>
+    
+        <label>
+            <br/><br/><textarea rows="4" cols="40" name="comments" id="comments">
+                This Textarea is for Comments
+            </textarea>
+        </label>
+
+        <br/><br/><label><input type="checkbox" name="email updates" checked /><b><u><i>Sign me up for e-mail updates</i></u></b></label>
+        <br/><label><input type="checkbox" name="payment information" checked /><b><u><i>Save my payment information</i></u></b></label>
+
+        <br/><br/><label><input type="submit" value="Submit"/></label>
+    </form>
+</body>
+</html>
