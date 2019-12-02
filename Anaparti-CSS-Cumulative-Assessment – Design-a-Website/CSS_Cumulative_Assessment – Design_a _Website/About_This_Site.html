@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>About This Site</title><!--The title of the webpage is "About This Site"-->
+    <!--The lines of code below, link two external stylesheets to this page -->
+    <link rel="stylesheet" type="text/css" href="external_stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="external_stylesheet_2.css" />
+    <style>
+        /*Styling for the h2 tag. The font of the text should be Times New Roman
+          where applicable and if not, any serif font. The font size is 38px,
+          the padding is 20px and the margin is 10px. THe text is center
+          alligned and justified. The position of the container is relative as well
+          as center. It is diplayed as a block.
+        */
+        h2 {
+            font-family: Times New Roman,'Times New Roman', Times, serif;
+            font-size: 38px;
+            padding: 20px;
+            text-align: center, justify;
+            margin: 10px;
+            position: relative, center;
+            display: block;
+        }
+    </style>
+</head>
+<!--
+    This is the body of the page
+-->
+<body>
+    <!--This is the code for the navigation bar-->
+    <nav>
+        <!--This is the div inside of the navigation bar consisting of an unordered
+            list with list items which are anchors linking to the other webpages.
+            The ID of the div is "nav_bar". The IDs of the anchors are nav since 
+            they are the differnt pages linking together to form the navigation bar.
+            The three other pages are Index.html which is the home page, Diary_Post.html
+            which is the section where the user posts their diary entry and Signup_or_Login.html
+            which is where the user signs-up or logs-in into the site.-->
+        <div id="nav_bar">
+            <ul>
+                <li><a href="Index.html" class="nav">Home Page</a></li>
+                <li><a href="Diary_Post.html" class="nav">Diary Post</a></li>
+                <li><a href="Signup_or_Login.html" class="nav">Signup or Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--This is a div which contains the two background images for this site-->
+    <div>
+        <div id="flower_background"><img src="Images/Background_image_2.png" id="flower_background" /></div>
+        <div id="desk_background"><img src="Images/Background - Desk_2.png" /></div>
+    </div>
+    <!--This is the header in which the h1 tag contains the heading which is 
+        "About this Site"-->
+    <header>
+        <h1>About This Site</h1>
+    </header>
+    <!--This is the main content in where the first section contains a h2 tag which
+        states "What This Site Is For". The paragragh tag below it is the write up
+        which answers the question posed in the first h2 tag. The second h2 tag states
+        "Contact Info" and the paragraph tag below it states my contact information -->
+    <main>
+        <h2>What This Site Is For</h2>
+        <p>
+            Being able to write down what they are feeling is sometimes the
+            only thing that allows for individuals to express themselves.
+            People often call these collections of writings Diaries.
+            In this day and age, everybody uses technology so, why not have your diary in it too?
+            This site will allow for the user to login and then the user can input their
+            Diary Post which will then be encrypted in the servers so as to not be visible to others.
+            The posts will only be visible by the user and as it is online,
+            it can be accessible by the user globally with out the burden of an actual book.
+        </p>
+
+        <h2>Contact Info</h2>
+        <p>
+            Nandini Anaparti, PTEC
+            <br />
+            <br />
+            For help or feedback contact the designer of this website at: <br/>
+            Email: NAnapartiV@smail.pembinatriails.ca
+        </p>
+    </main>
+</body>
+</html>

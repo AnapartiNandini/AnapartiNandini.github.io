@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Diary Post</title><!--The title of the webpage is "Diary Post"-->
+    <!--The lines of code below, link two external stylesheets to this page -->
+    <link rel="stylesheet" type="text/css" href="external_stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="external_stylesheet_2.css" />
+    <style>
+        /*h1 tag is styled so its position is absolute. It is 50% from the top and left
+          which positions it in the center. The x-coordinate is transalated -50% which 
+          horizontally positions the h1 content in the center. The y-coordinate is 
+          transalated -265%. There is multi-browser compatibilty for the transorm property.
+        */
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translateX(-50%) translateY(-265%);
+            -webkit-transform: translateX(-50%) translateY(-265%);
+            transform: translateX(-50%) translateY(-265%);
+        }
+
+        /*
+            The content with the ID of diary_post has a width of 1000px and the text
+            is aligned in the center.
+        */
+        #diary_post {
+            width: 1000px;
+            text-align: center;
+        }
+        /*The content with the ID of msg is styled so its position is absolute. It is 50% 
+          from the top and left which positions it in the center. The x-coordinate is 
+          transalated -50% which horizontally positions the h1 content in the center. 
+          The y-coordinate is transalated -27%. There is multi-browser compatibilty 
+          for the transorm property.The width of the content is 1200px and the height 
+          is 500px. The color of the text is white and the border of the content container
+          is black, 2px wide, and a solid line.
+        */
+        #msg {
+            width: 1200px;
+            height: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translateX(-50%) translateY(-27%);
+            -webkit-transform: translateX(-50%) translateY(-27%);
+            transform: translateX(-50%) translateY(-27%);
+            color: white;
+            border: 2px solid black;
+        }
+        /*The content with the ID submitmsg is styled so its position is absolute. 
+          It is 50% from the top and 102% from the left.The x-coordinate is 
+          transalated -50% which horizontally positions the h1 content in the 
+          center. The y-coordinate is transalated -1450%. There is multi-browser 
+          compatibilty for the transorm property. The content is to float to the right.
+        */
+        #submitmsg {
+            position: absolute;
+            top: 50%;
+            left: 102%;
+            -moz-transform: translateX(-50%) translateY(1450%);
+            -webkit-transform: translateX(-50%) translateY(1450%);
+            transform: translateX(-50%) translateY(1450%);
+            float: right;
+        }
+        /*The content with the ID usermsg is styled so its position is absolute. 
+          It is 50% from the top and 47.5% from the left. The x-coordinate
+          is transalated -50% which horizontally positions the h1 content in 
+          the center. The y-coordinate is transalated -1065%. There is 
+          multi-browser compatibilty for the transorm property. THe border is black
+          1px and a solid line.
+        */
+        #usermsg {
+            width: 1050px;
+            position: absolute;
+            top: 50%;
+            left: 47.5%;
+            -moz-transform: translateX(-50%) translateY(1605%);
+            -webkit-transform: translateX(-50%) translateY(1605%);
+            transform: translateX(-50%) translateY(1605%);
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<!--This is the body of the webpage-->
+<body>
+    <!--This is the navigation bar-->
+    <nav>
+        <!--This is the div inside of the navigation bar consisting of an unordered
+            list with list items which are anchors linking to the other webpages.
+            The ID of the div is "nav_bar". The IDs of the anchors are nav since
+            they are the differnt pages linking together to form the navigation bar.
+            The three other pages are Index.html which is the home page, About_This_Site.html
+            which is the section where the user gets info about whiat this site is about
+            and Signup_or_Login.html which is where the user signs-up or logs-in into
+            the site.-->
+        <div id="nav_bar">
+            <ul>
+                <li><a href="Index.html" class="nav">Home Page</a></li>
+                <li><a href="About_This_Site.html" class="nav">About This Site</a></li>
+                <li><a href="Signup_or_Login.html" class="nav">Signup or Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--This is a div which contains the two background images for this site-->
+    <div>
+        <div id="flower_background"><img src="Images/Background_image_2.png" id="flower_background" /></div>
+        <div id="desk_background"><img src="Images/Background - Desk_2.png" /></div>
+    </div>
+    <!--This is the header in which the h1 tag contains the heading which is
+        "Diary Post". Below the h1 tag is a div with an ID of diary_post. In the 
+        div, there are 3 form inputs. The first input is a message input with a name
+        and ID of msg. The second input is a text type with a name and ID od usermsg.
+        This input has a place holder of "Type diary post here..." max. character
+        count is 63 and this field is required. The third input is a submit type 
+        which has a name and ID of submitmsg and a value of "Post".-->
+    <header>
+        <h1>Diary Post</h1>
+        <div id="diary_post">
+            <form><input name="msg" id="msg" /></form>
+            <form><input placeholder="Type diary post here..." name="usermsg" type="text" id="usermsg" size="63" required /></form>
+            <form><input name="submitmsg" type="submit" id="submitmsg" value="Post" /></form>
+        </div>
+    </header>
+</body>
+</html>
